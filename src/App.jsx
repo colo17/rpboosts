@@ -696,7 +696,12 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 z-40 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-gradient-to-tr from-indigo-500 via-fuchsia-500 to-emerald-400" />
+            <img
+              src="/images/logoPNG.png"
+              alt={`${brandName} logo`}
+              className="h-11 w-11 object-contain"
+              loading="lazy"
+            />
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
                 {brandName}
@@ -748,7 +753,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="pt-24 md:pt-28">
+      <main className="pt-16 md:pt-20">
         {/* HERO */}
         <section className="relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.13),_transparent_60%),_radial-gradient(circle_at_bottom,_rgba(236,72,153,0.13),_transparent_60%)]" />
