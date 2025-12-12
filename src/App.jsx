@@ -145,12 +145,13 @@ const translations = {
           items: ["Content strategy", "Event and dynamics ideas", "Store / donation optimization"],
         },
         {
-          title: "Automation & bots",
-          description: "Discord bots for tickets, automatic announcements, and stats.",
+          title: "Custom content",
+          description:
+            "Eye-catching vehicle, outfit, and building textures that make your marketing pop across the city.",
           items: [
-            "Donation and support tickets",
-            "Automatic announcements for new clips",
-            "Growth reports inside Discord",
+            "Liveries and textures for cars and emergency fleets",
+            "Custom outfits/skins for factions, staff, and events",
+            "Billboards, shopfronts, and building wraps for campaigns",
           ],
         },
         {
@@ -290,17 +291,30 @@ const translations = {
           items: ["4–6 Reels / Shorts per month", "2 banners / flyers for events", "Basic social guidance", "Support via Discord"],
         },
         {
+          name: "Social Ads Booster",
+          badge: "Ads & social support",
+          price: "$$",
+          description: "We post and run paid social ads using your existing content to attract new players.",
+          items: [
+            "Scheduling posts with your existing videos and art",
+            "Paid social ads setup and optimization",
+            "Targeting and retargeting focused on player acquisition",
+            "Weekly performance recap and next steps",
+          ],
+        },
+        {
           name: "Creator",
           badge: "Best seller",
           price: "$$$",
           highlight: true,
           description: "For active servers that want constant presence.",
           items: [
-            "12–16 Reels / Shorts per month",
+            "8–12 Reels / Shorts per month",
             "Posts and stories design",
             "Flyers for every event of the month",
             "Branding review and improvements",
             "Monthly metrics report",
+            "Social Media Ads management",
           ],
         },
         {
@@ -309,10 +323,11 @@ const translations = {
           price: "$$$$",
           description: "For large communities that want to delegate most of the content.",
           items: [
-            "Up to 30 Reels / Shorts per month",
+            "Up to 15 Reels / Shorts per month",
             "Seasonal trailer / cinematic",
             "Full management of IG / TikTok / YouTube Shorts",
-            "Automations and bots on Discord",
+            "Google Analytics tracking on the website",
+            "Paid social ads management",
             "Ongoing consulting for growth and monetization",
           ],
         },
@@ -423,12 +438,13 @@ const translations = {
           items: ["Estrategia de contenido", "Ideas de eventos y dinámicas", "Optimización de tienda / donaciones"],
         },
         {
-          title: "Automatización & bots",
-          description: "Bots de Discord para tickets, anuncios automáticos y estadísticas.",
+          title: "Contenido custom",
+          description:
+            "Personalizamos texturas de autos, ropa y edificios para que tu marketing se vea más llamativo en la ciudad.",
           items: [
-            "Tickets de donación y soporte",
-            "Anuncios automáticos de nuevos clips",
-            "Reportes de crecimiento en Discord",
+            "Liveries y texturas para autos y flotas de emergencia",
+            "Outfits/skins custom para facciones, staff y eventos",
+            "Carteles, vidrieras y edificios intervenidos para campañas",
           ],
         },
         {
@@ -573,17 +589,30 @@ const translations = {
           ],
         },
         {
+          name: "Impulso Ads Social",
+          badge: "Ads y redes",
+          price: "$$",
+          description: "Publicamos en redes y corremos campañas pagas con tu contenido existente para atraer nuevos jugadores.",
+          items: [
+            "Calendario de posts usando tus videos y artes actuales",
+            "Setup y optimización de Ads en redes sociales",
+            "Segmentación y retargeting enfocado en captar jugadores",
+            "Reporte semanal de performance y próximos pasos",
+          ],
+        },
+        {
           name: "Creator",
           badge: "Más vendido",
           price: "$$$",
           highlight: true,
           description: "Para servidores activos que quieren presencia constante.",
           items: [
-            "12–16 Reels / Shorts al mes",
+            "8–12 Reels / Shorts al mes",
             "Diseño de posts y stories",
             "Flyers para todos los eventos del mes",
             "Revisión y mejora de branding",
             "Reporte mensual de métricas",
+            "Gestión de Ads en redes sociales",
           ],
         },
         {
@@ -592,10 +621,11 @@ const translations = {
           price: "$$$$",
           description: "Para grandes comunidades que quieren delegar casi todo el contenido.",
           items: [
-            "Hasta 30 Reels / Shorts al mes",
+            "Hasta 15 Reels / Shorts al mes",
             "Trailer / cinematic por temporada",
             "Gestión completa de IG / TikTok / YouTube Shorts",
-            "Automatizaciones y bots en Discord",
+            "Control de Google Analytics en la web",
+            "Gestión de Ads de pago en redes sociales",
             "Consultoría continua para crecimiento y monetización",
           ],
         },
@@ -667,22 +697,28 @@ export default function App() {
       code: "DNjR-qjBMUW",
       href: "https://www.instagram.com/reel/DNjR-qjBMUW/",
       image: "/images/video1.png",
+      label: "Instagram reel",
+      platformTitle: "Open on Instagram",
       views: "588K",
       likes: "12.4K",
       comments: "270",
     },
     {
       code: "DKQGn8IheVj",
-      href: "https://www.instagram.com/reel/DKQGn8IheVj/",
+      href: "https://www.tiktok.com/@bekkomusic/video/7509867611937639736?lang=es",
       image: "/images/video2.png",
-      views: "879K",
-      likes: "33.8K",
-      comments: "572",
+      label: "TikTok",
+      platformTitle: "Open on TikTok",
+      views: "1.5M",
+      likes: "112K",
+      comments: "610",
     },
     {
       code: "DPhcFQdD0tu",
       href: "https://www.instagram.com/p/DPhcFQdD0tu/",
       image: "/images/video3.png",
+      label: "Instagram reel",
+      platformTitle: "Open on Instagram",
       views: "110K",
       likes: "3.4K",
       comments: "114",
@@ -825,8 +861,11 @@ export default function App() {
                       className="flex aspect-[9/16] flex-col overflow-hidden rounded-2xl border border-slate-800 bg-transparent text-[10px]"
                     >
                       <div className="mb-1 flex items-center px-1 pt-1 text-[9px] text-slate-300">
-                        <span className="rounded-full bg-slate-900/80 px-1.5 py-0.5 font-semibold tracking-wide" title="Reel Instagram">
-                          Reel Instagram
+                        <span
+                          className="rounded-full bg-slate-900/80 px-1.5 py-0.5 font-semibold tracking-wide"
+                          title={clip.label || "Instagram reel"}
+                        >
+                          {clip.label || "Instagram reel"}
                         </span>
                       </div>
                       <a
@@ -834,7 +873,7 @@ export default function App() {
                         target="_blank"
                         rel="noreferrer"
                         className="group relative block h-full overflow-hidden rounded-xl"
-                        title="Open on Instagram"
+                        title={clip.platformTitle || "Open clip"}
                       >
                         <img
                           src={clip.image}
